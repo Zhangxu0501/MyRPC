@@ -21,7 +21,7 @@ public class Listener extends Thread {
 	@Override
 	public void run() {
 
-		System.out.println("启动服务器中，打开端口" + server.getPort());
+		System.out.println("鍚姩鏈嶅姟鍣ㄤ腑锛屾墦寮�绔彛" + server.getPort());
 		try {
 			socket = new ServerSocket(server.getPort());
 		} catch (IOException e1) {
@@ -30,15 +30,15 @@ public class Listener extends Thread {
 		}
 		while (server.isRunning()) {
 			try {
-				System.out.println("等待请求");
+				System.out.println("绛夊緟璇锋眰");
 				Socket client = socket.accept();
-				System.out.println("请求到来");
+				System.out.println("璇锋眰鍒版潵");
 				ObjectInputStream ois = new ObjectInputStream(client.getInputStream());
 				Invocation invo = (Invocation) ois.readObject();
-				System.out.println("远程调用:" + invo);
+				System.out.println("杩滅▼璋冪敤:" + invo);
 
 				server.call(invo);
-				
+
 				ObjectOutputStream oos = new ObjectOutputStream(client.getOutputStream());
 				oos.writeObject(invo);
 				oos.flush();

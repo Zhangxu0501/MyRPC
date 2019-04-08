@@ -2,7 +2,7 @@ package zx.rpc.support;
 
 import zx.rpc.protocal.Invocation;
 /*
- * server½Ó¿Ú£¬ÓĞÈçÏÂ·½·¨£¬¾ßÌåÊµÏÖÊÇÔÚRPCµÄÄÚ²¿ÀàRPCServerÖĞ
+ * serveræ¥å£ï¼Œæœ‰å¦‚ä¸‹æ–¹æ³•ï¼Œå…·ä½“å®ç°æ˜¯åœ¨RPCçš„å†…éƒ¨ç±»RPCServerä¸­
  * 
  */
 public interface Server {

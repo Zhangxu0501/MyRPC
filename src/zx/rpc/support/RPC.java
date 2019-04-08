@@ -33,17 +33,17 @@ public class RPC {
 	public static class RPCServer implements Server{
 		
 		/*
-		 * serverµÄÊµÏÖÀà
-		 * ÊµÏÖÁËÈçÏÂ·½·¨
+		 * serverçš„å®ç°ç±»
+		 * å®ç°äº†å¦‚ä¸‹æ–¹æ³•
 		 * 	
-			public void start();//¿ªÆôÒ»¸ölistenerÏß³Ì£¬´ò¿ª·şÎñÆ÷¶Ë¿Ú£¬²»¶ÏµØÖ´ĞĞ   ½ÓÊÕÇëÇó---»Øµ÷ ¹ı³Ì£¬Ö±µ½·şÎñÆ÷µÄisRunningÎªfalse¡£
-			public void register(Class interfaceDefiner,Class impl);	//×¢²á¶ÔÏó¼°Æä ÊµÏÖÀà¡£ ²¢ÇÒnewÒ»¸ö¶ÔÏó·ÅÈëÒ»¸öhashmapÖĞ£¬ÒÔ±ãµ÷ÓÃÊ±Ê¹ÓÃ¡£
-			public void call(Invocation invo);//ÔÚlistennerÖĞ½øĞĞµ÷ÓÃ£¬ÆäÖĞInvocationÊÇÓÉ¿Í»§¶Ë´«¹ıÀ´µÄ¶ÔÏóÁ÷¡£ÔÚlistenerÖĞÖ´ĞĞ¡£Ö´ĞĞ¹ı³ÌÈçÏÂ
-				Ê×ÏÈÔÚserviceEngineÖĞÄÃµ½ÊµÌå¶ÔÏó¡£
+			public void start();//å¼€å¯ä¸€ä¸ªlistenerçº¿ç¨‹ï¼Œæ‰“å¼€æœåŠ¡å™¨ç«¯å£ï¼Œä¸æ–­åœ°æ‰§è¡Œ   æ¥æ”¶è¯·æ±‚---å›è°ƒ è¿‡ç¨‹ï¼Œç›´åˆ°æœåŠ¡å™¨çš„isRunningä¸ºfalseã€‚
+			public void register(Class interfaceDefiner,Class impl);	//æ³¨å†Œå¯¹è±¡åŠå…¶ å®ç°ç±»ã€‚ å¹¶ä¸”newä¸€ä¸ªå¯¹è±¡æ”¾å…¥ä¸€ä¸ªhashmapä¸­ï¼Œä»¥ä¾¿è°ƒç”¨æ—¶ä½¿ç”¨ã€‚
+			public void call(Invocation invo);//åœ¨listennerä¸­è¿›è¡Œè°ƒç”¨ï¼Œå…¶ä¸­Invocationæ˜¯ç”±å®¢æˆ·ç«¯ä¼ è¿‡æ¥çš„å¯¹è±¡æµã€‚åœ¨listenerä¸­æ‰§è¡Œã€‚æ‰§è¡Œè¿‡ç¨‹å¦‚ä¸‹
+				é¦–å…ˆåœ¨serviceEngineä¸­æ‹¿åˆ°å®ä½“å¯¹è±¡ã€‚
 			
 			public boolean isRunning();
 			public int getPort();
-			public void stop();°ÑrunningÉèÖÃÎªfalse
+			public void stop();æŠŠrunningè®¾ç½®ä¸ºfalse
 		 */
 		private int port = 20382;
 		private Listener listener; 
@@ -103,7 +103,7 @@ public class RPC {
 
 		@Override
 		public void start() {
-			System.out.println("Æô¶¯·şÎñÆ÷");
+			System.out.println("å¯åŠ¨æœåŠ¡å™¨");
 			listener = new Listener(this);
 			this.isRuning = true;
 			listener.start();

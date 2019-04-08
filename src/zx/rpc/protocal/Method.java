@@ -10,7 +10,7 @@ public class Method implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private String methodName;
-	private Class[] params;//²ÎÊıÁĞ±í£¬¶ø²»ÊÇÊı¾İ£¬²ÎÊıµÄÊı¾İÔÚinvocationÖĞ¡£
+	private Class[] params;//å‚æ•°åˆ—è¡¨ï¼Œè€Œä¸æ˜¯æ•°æ®ï¼Œå‚æ•°çš„æ•°æ®åœ¨invocationä¸­ã€‚
 	public Method(String name, Class<?>[] parameterTypes) {
 		this.methodName = name;
 		this.params = parameterTypes;

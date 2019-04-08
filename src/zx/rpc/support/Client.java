@@ -43,7 +43,7 @@ public class Client {
 
 	public void invoke(Invocation invo) throws UnknownHostException, IOException, ClassNotFoundException {
 		init();
-		System.out.println("Ğ´ÈëÊı¾İ");
+		System.out.println("å†™å…¥æ•°æ®");
 		oos.writeObject(invo);
 		oos.flush();
 		ois = new ObjectInputStream(socket.getInputStream());
