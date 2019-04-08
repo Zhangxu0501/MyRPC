@@ -27,7 +27,7 @@ public class MainClient {
 		//Arrays.sort(a);
 		
 		time = System.currentTimeMillis()-time;
-		System.out.println("排序"+num+"个数共使用了"+time+"毫秒");
+		System.out.println("鎺掑簭"+num+"涓暟鍏变娇鐢ㄤ簡"+time+"姣");
 		
 		
 		
