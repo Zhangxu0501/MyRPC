@@ -1,13 +1,12 @@
 package test;
 
-import java.util.Arrays;
 import java.util.Random;
 
-import zx.rpc.support.RPC;
+import zx.rpc.support.RPCProxy;
 
-public class MainClient {
+public class StartClient {
 	public static void main(String[] args) {
-		Sort echo = RPC.getProxy(Sort.class, "localhost", 20382);
+		Sort echo = RPCProxy.getProxy(Sort.class, "localhost", 20382);
 		
 		Random r = new Random();
 		int [] a =null;
